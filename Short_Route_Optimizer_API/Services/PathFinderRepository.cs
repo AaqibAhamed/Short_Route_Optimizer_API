@@ -18,8 +18,8 @@ public class PathFinderRepository : IPathFinderRepository
             return shortestPath;
         }
 
-        var distances = new Dictionary<Node, int>();
-        var previousNodes = new Dictionary<Node, Node>();
+        var distances = new Dictionary<string, int>();
+        var previousNodes = new Dictionary<string, Node>();
         var priorityQueue = new List<Node> { startNode };
 
         foreach (var node in graphNodes)
